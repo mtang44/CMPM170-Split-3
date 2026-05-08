@@ -48,7 +48,7 @@ Light:
   m_Intensity: 100
   m_Range: 14.56593
   m_SpotAngle: 79.80731
-  m_InnerSpotAngle: 44.397484
+  m_InnerSpotAngle: 59.152
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 0
@@ -147,7 +147,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4
   m_Height: 30
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
