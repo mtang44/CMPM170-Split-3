@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &122751307
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +151,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+--- !u!1 &778122032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9085561425367687616, guid: 20669c7d988f0814083080de33704e23, type: 3}
+  m_PrefabInstance: {fileID: 108643682058361502}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> parent of 22b5984 (mountain map update)
 --- !u!1 &1054822157
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +251,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1373443844
+=======
+--- !u!1 &1332410163
+>>>>>>> parent of 22b5984 (mountain map update)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,9 +263,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1373443847}
   - component: {fileID: 1373443846}
   - component: {fileID: 1373443845}
+=======
+  - component: {fileID: 1332410165}
+  - component: {fileID: 1332410164}
+  - component: {fileID: 1332410166}
+>>>>>>> parent of 22b5984 (mountain map update)
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -370,6 +388,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1332410166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332410163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+>>>>>>> parent of 22b5984 (mountain map update)
 --- !u!1 &1559808969
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +485,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: c5ac5dfc55ef14446a2c8d9d19360005, type: 2}
+=======
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+>>>>>>> parent of 22b5984 (mountain map update)
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -547,7 +601,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: c5ac5dfc55ef14446a2c8d9d19360005, type: 2}
+=======
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+>>>>>>> parent of 22b5984 (mountain map update)
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -659,7 +717,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: c5ac5dfc55ef14446a2c8d9d19360005, type: 2}
+=======
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+>>>>>>> parent of 22b5984 (mountain map update)
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -866,7 +928,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: c5ac5dfc55ef14446a2c8d9d19360005, type: 2}
+=======
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+>>>>>>> parent of 22b5984 (mountain map update)
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -927,11 +993,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373486603164638815, guid: 20669c7d988f0814083080de33704e23, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 3373486603164638815, guid: 20669c7d988f0814083080de33704e23, type: 3}
       propertyPath: m_LocalPosition.z
       value: 671
+=======
+      value: 3.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3373486603164638815, guid: 20669c7d988f0814083080de33704e23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 417.96863
+>>>>>>> parent of 22b5984 (mountain map update)
       objectReference: {fileID: 0}
     - target: {fileID: 3373486603164638815, guid: 20669c7d988f0814083080de33704e23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1090,6 +1164,9 @@ SceneRoots:
   - {fileID: 1761492957}
   - {fileID: 1559808973}
   - {fileID: 1054822160}
+<<<<<<< HEAD
   - {fileID: 1373443847}
   - {fileID: 8839355362514267655}
   - {fileID: 122751308}
+=======
+>>>>>>> parent of 22b5984 (mountain map update)
