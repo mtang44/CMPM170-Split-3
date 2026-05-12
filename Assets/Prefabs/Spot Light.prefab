@@ -45,10 +45,10 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 0.87302315, b: 0.6949685, a: 0.54901963}
-  m_Intensity: 100
-  m_Range: 14.56593
-  m_SpotAngle: 137.79662
-  m_InnerSpotAngle: 1.1663246
+  m_Intensity: 150
+  m_Range: 15
+  m_SpotAngle: 168.46675
+  m_InnerSpotAngle: 45.21385
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 0
@@ -88,7 +88,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
-  m_ColorTemperature: 6924
+  m_ColorTemperature: 3378
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -147,7 +147,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 3
   m_Height: 30
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}

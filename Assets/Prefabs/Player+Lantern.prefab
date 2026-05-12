@@ -1000,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3575381562526796334, guid: 20669c7d988f0814083080de33704e23, type: 3}
+      propertyPath: distanceBetweenStamps
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6340045862667825720, guid: 20669c7d988f0814083080de33704e23, type: 3}
       propertyPath: m_PlayerPrefab
       value: 
