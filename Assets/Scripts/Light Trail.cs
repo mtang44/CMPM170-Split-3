@@ -28,7 +28,7 @@ public class LightTrail : MonoBehaviour
 
     void SpawnStamp()
     {
-        Vector3 pos = new Vector3(player.position.x,player.position.y + 5, player.position.z);
+        Vector3 pos = new Vector3(player.position.x,player.position.y + 5, player.position.z - 5);
         GameObject newLight = Instantiate(lightStampPrefab, pos, Quaternion.Euler(90, Random.Range(0, 360), 0));
         newLight.transform.SetParent(LightTrailHolder.transform);
     }
