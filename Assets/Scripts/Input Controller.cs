@@ -27,6 +27,12 @@ public class InputController : MonoBehaviour
         lookVector = lookAction.ReadValue<Vector2>();
         playerController.Rotate(lookVector);
 
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            gameObject.transform.position = new Vector3( gameObject.transform.position.x + 10f,   gameObject.transform.position.y + 50f,  gameObject.transform.position.z);
+            print("efff");
+        }
+
     }
 
     //actual might not need to do this.
