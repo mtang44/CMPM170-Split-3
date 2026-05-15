@@ -30,7 +30,26 @@ public class InputController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             gameObject.transform.position = new Vector3( gameObject.transform.position.x + 10f,   gameObject.transform.position.y + 50f,  gameObject.transform.position.z);
-            print("efff");
+        }
+
+        if(Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            gameObject.transform.position = new Vector3(-30, 12, 290);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            gameObject.transform.position = new Vector3(-350, 12, -450);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            gameObject.transform.position = new Vector3(-570, 375, -650);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            gameObject.transform.position = new Vector3(1870, 280, -780);
         }
 
     }
