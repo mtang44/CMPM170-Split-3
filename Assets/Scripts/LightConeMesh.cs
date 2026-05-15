@@ -11,7 +11,6 @@ public class LightConeMesh : MonoBehaviour
     {
         GetComponent<MeshFilter>().mesh = BuildConeMesh();
 
-        // No custom shader — use the most basic additive possible
         Shader shader = Shader.Find("Legacy Shaders/Particles/Additive");
         if (shader == null) shader = Shader.Find("Particles/Additive");
         if (shader == null) shader = Shader.Find("Unlit/Color");
@@ -58,7 +57,7 @@ public class LightConeMesh : MonoBehaviour
         Mesh mesh      = new Mesh();
         mesh.name      = "LightCone";
         mesh.vertices  = vertices;
-        mesh.colors    = colors;       // ← vertex color fade
+        mesh.colors    = colors;       
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
         return mesh;
