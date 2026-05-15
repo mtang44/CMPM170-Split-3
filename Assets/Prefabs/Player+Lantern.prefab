@@ -172,6 +172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1809085838298626945}
+  - {fileID: 2561496950818426288}
   m_Father: {fileID: 109787058079906278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7290908214521671831
@@ -188,14 +189,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 7808282878825542842}
   ambienceSource: {fileID: 5170773498643865216}
+  footstepSource: {fileID: 9190180713893033958}
   forestMusic: {fileID: 8300000, guid: c82437dc938d142759b911fb68088d0f, type: 3}
   mountainMusic: {fileID: 8300000, guid: 92a0ef438b1a4416f90f7f6e2b0de162, type: 3}
   beachMusic: {fileID: 8300000, guid: 9c604651f5d9648ebad4e7bc599408d5, type: 3}
   spawnMusic: {fileID: 8300000, guid: ff039d49c6ec74b33bc34298f30a5d3a, type: 3}
-  forestAmbience: []
-  mountainAmbience: []
-  beachAmbience: []
+  desertMusic: {fileID: 0}
+  forestAmbience:
+  - {fileID: 8300000, guid: d93d7002b4d112743a45a1bb59df8107, type: 3}
+  - {fileID: 8300000, guid: 76ddf3c4867f808468c0e27a0580d073, type: 3}
+  mountainAmbience:
+  - {fileID: 8300000, guid: e04647c89f311dd4c989b7229bd091a5, type: 3}
+  beachAmbience:
+  - {fileID: 8300000, guid: 702fececaa6c4e344b2c32cc74627f8d, type: 3}
   spawnAmbience: []
+  desertAmbience:
+  - {fileID: 8300000, guid: c51b87c8ced13504c8bce1caa5f5e13c, type: 3}
+  forestFootsteps:
+  - {fileID: 8300000, guid: 7e42c0936c715b6419b536f20d08b1cf, type: 3}
+  - {fileID: 8300000, guid: 91e9f76dae662a94bb7e6eaef19d8aeb, type: 3}
+  - {fileID: 8300000, guid: 1b90f29435aa5464aa212406a2934737, type: 3}
+  - {fileID: 8300000, guid: 8ee88e245e55e864cacaac3dafffab81, type: 3}
+  - {fileID: 8300000, guid: 02be715fbf2464d4ab90581836926576, type: 3}
+  - {fileID: 8300000, guid: 50612a96ef0e4c046b91677b7db4a846, type: 3}
+  mountainFootsteps:
+  - {fileID: 8300000, guid: 29ba0aa0f11577f48ae47b0a520c183d, type: 3}
+  - {fileID: 8300000, guid: 3202332556729224b8bb3968cdbe6721, type: 3}
+  - {fileID: 8300000, guid: adf618b15d41037408aace7ce701c5c2, type: 3}
+  - {fileID: 8300000, guid: 09aae81e1452712428b96156a8bb6814, type: 3}
+  - {fileID: 8300000, guid: 42351c3f8e4eb464e983c5a8cc6113c5, type: 3}
+  beachFootsteps:
+  - {fileID: 8300000, guid: c37a6519e308dd94099a18904534456c, type: 3}
+  - {fileID: 8300000, guid: c06705140920eec45ac5dcde41871f19, type: 3}
+  - {fileID: 8300000, guid: 378ee986546d1ad49a89ffcede90049d, type: 3}
+  - {fileID: 8300000, guid: 7ed63100d79ae5740a26d84331b78d45, type: 3}
+  spawnFootsteps:
+  - {fileID: 8300000, guid: 0ed8d2e47f329f743a2992b764b2b750, type: 3}
+  - {fileID: 8300000, guid: 99835d10d1261874aa69422a94c5f633, type: 3}
+  - {fileID: 8300000, guid: 1fcc16fdb9d344d4b9b10a2f60fa3c0d, type: 3}
+  - {fileID: 8300000, guid: e2b646c5ea0646d47bf7857d1c531f65, type: 3}
+  desertFootsteps:
+  - {fileID: 8300000, guid: 294ee24fcd6a4e94aa0526b3883d89ac, type: 3}
+  - {fileID: 8300000, guid: f0c80a81283d7c54baedd8e842d8a2f0, type: 3}
+  - {fileID: 8300000, guid: 3e56f3cd155649747a600c9281c28206, type: 3}
+  - {fileID: 8300000, guid: a5ecb4ac49fb8df4fa709bd2241dbe75, type: 3}
   minAmbienceDelay: 5
   maxAmbienceDelay: 15
   fadeDuration: 3
@@ -216,6 +253,135 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &7285572915276995936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2561496950818426288}
+  - component: {fileID: 9190180713893033958}
+  m_Layer: 0
+  m_Name: Footsteep Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2561496950818426288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285572915276995936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8613993567405457326}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &9190180713893033958
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285572915276995936}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.799
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1299,6 +1465,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6591539261743730744, guid: 20669c7d988f0814083080de33704e23, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 7290908214521671831}
     - target: {fileID: 9036837038124850481, guid: 20669c7d988f0814083080de33704e23, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1

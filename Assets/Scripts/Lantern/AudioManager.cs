@@ -9,7 +9,8 @@ public class AudioManager : MonoBehaviour
         Forest,
         Mountain,
         Beach,
-        Spawn
+        Spawn,
+        Desert
     }
 
     [Header("Music")]
@@ -18,17 +19,31 @@ public class AudioManager : MonoBehaviour
     [Header("Random Ambience")]
     public AudioSource ambienceSource;
 
+    [Header("Footstep")]
+    public AudioSource footstepSource;
+
+    private Coroutine footstepRoutine;
+
     [Header("Music Clips")]
     public AudioClip forestMusic;
     public AudioClip mountainMusic;
     public AudioClip beachMusic;
     public AudioClip spawnMusic;
+    public AudioClip desertMusic;
 
     [Header("Ambience Lists")]
     public List<AudioClip> forestAmbience = new List<AudioClip>();
     public List<AudioClip> mountainAmbience = new List<AudioClip>();
     public List<AudioClip> beachAmbience = new List<AudioClip>();
     public List<AudioClip> spawnAmbience = new List<AudioClip>();
+    public List<AudioClip> desertAmbience = new List<AudioClip>();
+
+    [Header("Footstep Lists")]
+    public List<AudioClip> forestFootsteps = new List<AudioClip>();
+    public List<AudioClip> mountainFootsteps = new List<AudioClip>();
+    public List<AudioClip> beachFootsteps = new List<AudioClip>();
+    public List<AudioClip> spawnFootsteps = new List<AudioClip>();
+    public List<AudioClip> desertFootsteps = new List<AudioClip>();
 
     [Header("Ambience Timing")]
     public float minAmbienceDelay = 5f;
@@ -47,7 +62,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         //just in case sources is not attatched
-        if (musicSource == null || ambienceSource == null)
+        /*if (musicSource == null || ambienceSource == null || footstepSource == null)
         {
             AudioSource[] sources = GetComponentsInChildren<AudioSource>();
 
@@ -56,7 +71,10 @@ public class AudioManager : MonoBehaviour
 
             if (sources.Length > 1)
                 ambienceSource = sources[1];
-        }
+
+            if (sources.Length > 2)
+                footstepSource = sources[2];
+        }*/
 
         ChangeArea(AreaType.Spawn);
     }
@@ -106,7 +124,6 @@ public class AudioManager : MonoBehaviour
     IEnumerator FadeMusic(AudioClip newClip)
     {
         float startVolume = musicSource.volume;
-
         // fade out
         while (musicSource.volume > 0)
         {
@@ -164,6 +181,9 @@ public class AudioManager : MonoBehaviour
 
             case AreaType.Spawn:
                 return spawnMusic;
+
+            case AreaType.Desert:
+                return desertMusic;
         }
 
         return null;
@@ -184,8 +204,74 @@ public class AudioManager : MonoBehaviour
 
             case AreaType.Spawn:
                 return spawnAmbience;
+
+            case AreaType.Desert:
+                return desertAmbience;
         }
 
         return spawnAmbience;
+    }
+    public void SetFootstepMoving(bool isMoving)
+    {
+        if (isMoving)
+        {
+            Debug.Log("player is moving");
+            if (footstepRoutine == null)
+            {
+                footstepRoutine = StartCoroutine(PlayFootstepsWhileMoving());
+            }
+        }
+    }
+    IEnumerator PlayFootstepsWhileMoving()
+    {
+        while (true)
+        {
+            List<AudioClip> currentList = GetFootstepList(currentArea);
+
+            if (currentList.Count > 0 && footstepSource != null)
+            {
+                AudioClip randomClip = currentList[Random.Range(0, currentList.Count)];
+                Debug.Log("Footsteep sound trigger");
+                footstepSource.PlayOneShot(randomClip);
+
+                yield return new WaitForSeconds(randomClip.length);
+            }
+            else
+            {
+                yield return null;
+            }
+
+            // check after play footstep
+            PlayerMovement player = FindFirstObjectByType<PlayerMovement>();
+
+            if (player == null || !player.isMoving())
+            {
+                footstepRoutine = null;
+                yield break;
+            }
+        }
+    }
+
+    List<AudioClip> GetFootstepList(AreaType area)
+    {
+        switch (area)
+        {
+            case AreaType.Forest:
+                return forestFootsteps;
+
+            case AreaType.Mountain:
+                return mountainFootsteps;
+
+            case AreaType.Beach:
+                return beachFootsteps;
+
+            case AreaType.Spawn:
+                return spawnFootsteps;
+
+            case AreaType.Desert:
+                return desertFootsteps;
+        }
+
+        return spawnFootsteps;
     }
 }

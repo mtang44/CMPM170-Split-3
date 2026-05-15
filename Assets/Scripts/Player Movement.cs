@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
      private float verticalVelocity;
      private Vector3 move;
 
+    public AudioManager audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,17 +23,23 @@ public class PlayerMovement : MonoBehaviour
     }
     public bool isMoving()
     {
-        
-        return move.x != 0 || move.z != 0;
+
+        //return move.x != 0 || move.z != 0;
+        return new Vector2(move.x, move.z).sqrMagnitude > 0.001f;
     }
 
     public void Move(Vector2 movementVector)
     {
+        Debug.Log("Move called: " + movementVector);
         move = transform.forward * movementVector.y + transform.right * movementVector.x;
         move = move * moveSpeed * Time.deltaTime;
         move.y = VerticalForceCalculation();
         characterController.Move(move);
-        
+
+        if (audioManager != null)
+        {
+            audioManager.SetFootstepMoving(isMoving());
+        }
     }
     public void Rotate(Vector2 rotateVector)
     {
