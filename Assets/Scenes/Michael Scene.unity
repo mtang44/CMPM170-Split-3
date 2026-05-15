@@ -22815,6 +22815,10 @@ PrefabInstance:
       propertyPath: desertMusic
       value: 
       objectReference: {fileID: 8300000, guid: 4aecab08a3e164c90bf4272c2ea6da4e, type: 3}
+    - target: {fileID: 7290908214521671831, guid: 541d35c8d2169451f8cfa19ff9dec449, type: 3}
+      propertyPath: 'forestFootsteps.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cdfb6ed50cc5e1d4fa76890af316e5f0, type: 3}
     - target: {fileID: 8844469984524823316, guid: 541d35c8d2169451f8cfa19ff9dec449, type: 3}
       propertyPath: m_Name
       value: Player+Lantern
